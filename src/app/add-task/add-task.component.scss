@@ -1,0 +1,54 @@
+.card {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.card-body {
+    background: white;
+    padding: 1rem 4rem;
+    margin-top: 5rem;
+}
+form {
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin: 0.5rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+input {
+    width: 30rem;
+    height: 3rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color: aqua;
+    border-radius: 20px;
+    border: 2px solid crimson;
+} 
+
+#btn {
+    width: 12rem;
+    height: 2.5rem;
+
+    letter-spacing: 3px;
+    background-color: blueviolet;
+    color: white;
+    border: white;
+    border-radius: 5px;
+}

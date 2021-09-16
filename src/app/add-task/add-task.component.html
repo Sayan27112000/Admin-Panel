@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup] = "userForm" (submit)="createNewTask()">
+            <div class="mt-5">
+                <div class="form-row">
+    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label> Task Name : </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <input type="text" formControlName = "taskname" class="form-control" placeholder="task-name" [ngClass] = "{'is-invalid': listData && f.taskname.errors}" required>
+                                <div *ngIf="listData && f.taskname.errors" class="invalid-feedback">
+                                    <div *ngIf="f.taskname.errors.required">Task Name is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label> Date : </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <input type="date" formControlName = "date" class="form-control" placeholder="Date" [ngClass] = "{'is-invalid': listData && f.date.errors}">
+                                <div *ngIf="listData && f.date.errors" class="invalid-feedback">
+                                    <div *ngIf="f.date.errors.required">Date is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label> Hours Spent : </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <input type="number" formControlName = "hours" class="form-control" placeholder="Hours Spent" [ngClass] = "{'is-invalid': listData && f.hours.errors}">
+                                <div *ngIf="listData && f.hours.errors" class="invalid-feedback">
+                                    <div *ngIf="f.hours.errors.required">Hours Spent is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-row mt-4" style="padding: 10px;">
+                        <div class="col-md-6">
+                            <button id="btn" type="button" class="btn btn-primary" *ngIf = "showAdd" (click) = "addItem()" [disabled]="!userForm.valid">ADD</button> &nbsp;
+                            <button id="btn" type="button" class="btn btn-primary mb-3" *ngIf = "showUpdate" (click) = "updateItem()">UPDATE</button>
+                            <button id="btn" type="button" class="btn btn-secondary" (click) = "reset()" [disabled]="!userForm.valid">RESET</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>

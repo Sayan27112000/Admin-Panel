@@ -1,0 +1,23 @@
+<div class="col-md-12 m-3">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th> TASK NAME </th>
+                <th> DATE </th>
+                <th> HOURS SPENT </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let item of listData; let i = index">
+                <td><span>{{item.taskname}}</span></td>
+                <td><span>{{item.date}}</span></td>
+                <td><span>{{item.hours}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="col-md-12">
+        <button type="button" class="btn btn-secondary" (click)="onSubmit()">SUBMIT DATA</button>
+    </div>
+</div>
