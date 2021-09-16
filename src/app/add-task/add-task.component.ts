@@ -37,6 +37,7 @@ export class AddTaskComponent implements OnInit {
     console.log(this.userForm.value)
 
     this.listData.push(this.userForm.value);
+    console.log('add',this.listData)
     localStorage.setItem("infos" , JSON.stringify(this.listData));
 
     this.reset();

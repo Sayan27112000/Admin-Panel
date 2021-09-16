@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TaskListComponent implements OnInit {
 
   userForm : FormGroup;
-  listData : any;
+  listData: any;
   id: any;
   showAdd : boolean;
   showUpdate : boolean;
@@ -19,7 +19,8 @@ export class TaskListComponent implements OnInit {
 
     this.showAdd = true;
     this.showUpdate = false;
-    this.listData = [];
+    const infoArr = localStorage.getItem("infos") || '';
+    this.listData = JSON.parse(infoArr);
 
     this.userForm = this.fb.group ({
       taskname : ['' , Validators.required],
@@ -29,17 +30,6 @@ export class TaskListComponent implements OnInit {
     })
   }
 
-  public addItem() : void {
-    console.log(this.userForm.value)
-
-    this.listData.push(this.userForm.value);
-    localStorage.setItem("infos" , JSON.stringify(this.listData));
-
-    this.reset();
-    this.showAdd = true;
-    this.showUpdate = false;
-  }
-
   reset(){
     this.userForm.reset();
     this.editIndex = -1;
@@ -47,15 +37,7 @@ export class TaskListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //check if localstorage has data then put it in listData array or else leave it as it is..
-
-    // this.listData = JSON.parse(localStorage.getItem('infos'));
-
-  }
-
-   onSubmit () {
-    localStorage.setItem("infos" , JSON.stringify(this.listData));
-    console.log(localStorage.getItem('info'));
+   
   }
 
 }
