@@ -8,6 +8,7 @@
     background: white;
     padding: 1rem 4rem;
     margin-top: 5rem;
+    border-radius: 20px;
 }
 form {
     background: white;
@@ -32,15 +33,8 @@ form {
 input {
     width: 30rem;
     height: 3rem;
-    border: 1px solid blue;
     border-radius: 5px;
 }
-
-input:hover {
-    background-color: aqua;
-    border-radius: 20px;
-    border: 2px solid crimson;
-} 
 
 #btn {
     width: 12rem;
@@ -51,4 +45,10 @@ input:hover {
     color: white;
     border: white;
     border-radius: 5px;
+    padding: 0rem 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
 }

@@ -1,17 +1,37 @@
 table {
-    width: 95%;
-    height: 2rem; 
-    border: 2px solid black;
+    width: 98%;
+    height: 2rem;
     padding: 8px;
 }
 
+
+.btncontainer {
+    display: flex;
+    justify-content: center
+    
+}
+
 #btn {
-    width: 12rem;
-    height: 2.5rem;
+    width: 8rem;
+    height: 2rem;
 
     letter-spacing: 3px;
     background-color: blueviolet;
     color: white;
     border: white;
     border-radius: 5px;
+    padding: 0rem 2rem;
+}
+
+
+#btns {
+    width: 8rem;
+    height: 2rem;
+
+    background: red;
+    letter-spacing: 3px;
+    color: white;
+    border: white;
+    border-radius: 5px;
+    padding: 0rem 2rem;
 }

@@ -47,9 +47,9 @@
                     </div>
     
                     <div class="form-row mt-4" style="padding: 10px;">
-                        <div class="col-md-6">
-                            <button id="btn" type="button" class="btn btn-primary" *ngIf = "showAdd" (click) = "addItem()" [disabled]="!userForm.valid">ADD</button> &nbsp;
-                            <button id="btn" type="button" class="btn btn-primary mb-3" *ngIf = "showUpdate" (click) = "updateItem()">UPDATE</button>
+                        <div class="buttons col-md-6">
+                            <button id="btn" type="button" class="btn btn-primary" (click) = "addItem()" [disabled]="!userForm.valid">ADD</button> &nbsp;
+                            
                             <button id="btn" type="button" class="btn btn-secondary" (click) = "reset()" [disabled]="!userForm.valid">RESET</button>
                         </div>
                     </div>

@@ -35,9 +35,45 @@ export class TaskListComponent implements OnInit {
     this.editIndex = -1;
   }
 
+  removeItem(element: any){
+    this.listData.forEach((value: any , index: any ) => {
+      if (value == element)
+      this.listData.splice(index , 1);
+      alert("Deleted Successfully!")
+    });
+  }
+
 
   ngOnInit(): void {
-   
   }
+
+  onEdit(element: any, index: number) {
+    this.showAdd = false;
+    this.showUpdate = true;
+    this.userForm.patchValue({
+      taskname: element.taskname,
+      date: element.date,
+      hours: element.hours,
+    });
+
+  this.editIndex = index;
+  }
+
+  updateItem() {
+    this.showAdd = true;
+    this.showUpdate = false;
+
+    if(this.editIndex >= 0) {
+      let userData = this.userForm.value;
+       this.listData[this.editIndex].taskname = userData.taskname;
+       this.listData[this.editIndex].date = userData.date;
+       this.listData[this.editIndex].hours = userData.hours;
+    }
+
+    localStorage.setItem("infos" , JSON.stringify(this.listData));
+    this.reset();
+    
+  }
+
 
 }

@@ -39,6 +39,7 @@ export class AddTaskComponent implements OnInit {
     this.listData.push(this.userForm.value);
     console.log('add',this.listData)
     localStorage.setItem("infos" , JSON.stringify(this.listData));
+    alert("Data Added. Check Tasklist");
 
     this.reset();
     this.showAdd = true;
@@ -50,22 +51,7 @@ export class AddTaskComponent implements OnInit {
     this.editIndex = -1;
   }
 
-  updateItem() {
-    this.showAdd = true;
-    this.showUpdate = false;
-
-    if(this.editIndex >= 0) {
-      let userData = this.userForm.value;
-       this.listData[this.editIndex].name = userData.name;
-       this.listData[this.editIndex].address = userData.address;
-       this.listData[this.editIndex].gender = userData.gender;
-       this.listData[this.editIndex].mail = userData.mail;
-    }
-
-    localStorage.setItem("infos" , JSON.stringify(this.listData));
-    this.reset();
-    
-  }
+ 
 
   ngOnInit(): void {
     //check if localstorage has data then put it in listData array or else leave it as it is..

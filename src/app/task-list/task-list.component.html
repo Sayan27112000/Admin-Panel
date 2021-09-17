@@ -1,5 +1,5 @@
 <div class="col-md-12 m-3">
-    <table class="table table-bordered">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th> TASK NAME </th>
@@ -13,6 +13,13 @@
                 <td><span>{{item.taskname}}</span></td>
                 <td><span>{{item.date}}</span></td>
                 <td><span>{{item.hours}}</span></td>
+                <td>
+                    <div class="btncontainer">
+                    <button id="btn" *ngIf = "showAdd" (click) = "onEdit(item, i)" type="button">EDIT</button>
+                    <button id="btn" type="button" *ngIf = "showUpdate" (click) = "updateItem()">UPDATE</button> &nbsp;
+                    <button id="btns"  (click) ="removeItem(item)" type="button" >DELETE</button>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -9,9 +9,11 @@ export class AppComponent {
   
   title = 'admin';
   ifLogin: boolean;
+  ifRegister: boolean;
 
   constructor() {
     this.ifLogin = window.location.pathname === '/login';
+    this.ifRegister = window.location.pathname === '/register';
   }
 
 

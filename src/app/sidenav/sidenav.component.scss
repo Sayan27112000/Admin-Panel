@@ -8,26 +8,19 @@ i {
     vertical-align: center;
 }
 
-.mat-subheader {
-    color: slateblue;
-    font-size: 0.6rem;
-    font-weight: 100;
-    letter-spacing: 1px;
-}
-
 .mat-divider {
     border-top-width: 2px;
-    border-color: white;
+    border-color: lightgray;
 }
 
 .mat-list-item {
     color: gainsboro !important;
-    height: 44px !important;
+    height: 5rem !important;
 
     ::ng-deep {
         .mat-list-item-content {
             border-radius: 5px;
-            font-size: 0.8rem;
+            font-size: 1rem;
             margin: 0 8px;
             margin-bottom: 4px;
 

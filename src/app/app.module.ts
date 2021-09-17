@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidenavComponent,
     LoginComponent,
     AddTaskComponent,
-    TaskListComponent
+    TaskListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
