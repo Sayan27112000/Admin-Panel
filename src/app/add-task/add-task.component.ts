@@ -39,7 +39,7 @@ export class AddTaskComponent implements OnInit {
     this.listData.push(this.userForm.value);
     console.log('add',this.listData)
     localStorage.setItem("infos" , JSON.stringify(this.listData));
-    alert("Data Added. Check Tasklist");
+    alert("Data Added. PLease Check Tasklist");
 
     this.reset();
     this.showAdd = true;
